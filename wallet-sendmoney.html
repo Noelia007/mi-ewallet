@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviar Dinero</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilos/sendmoney.css">
+</head>
+
+<body>
+  <div id="app">
+    <h1>MI E-WALLET</h1><br>
+    <h2>Contactos</h2>
+    <ul id="contactList" class="list-group">
+      <li class="list-group-item">
+        <form method="post" action="/send/">
+          <input type="checkbox" name="username">
+          Daniel Martín,CBU: 123456789 , Alias: dani.martin, Banco: Nación
+        </form>
+      </li>
+      <li class="list-group-item">
+        <form method="post" action="/send/">
+          <input type="checkbox" name="username">
+          Fernanda Santana,CBU: 987654321, Alias: fer.santa, Banco: Estado
+        </form>
+      </li>
+      <li class="list-group-item">
+        <form method="post" action="/send/">
+          <input type="checkbox" name="username">
+          Juan García,CBU: 593850257, Alias: juan.gar, Banco: Santander
+        </form>
+      </li>
+      <li class="list-group-item">
+        <form method="post" action="/send/">
+          <input type="checkbox" name="username">
+          Joaquin Nievas,CBU: 395701835, Alias: joa.nie, Banco: Santander
+        </form>
+      </li><br>
+      <div class="enviar-dinero">
+        <button type="button">Enviar dinero</button>
+        </form>
+      </div><br>
+      <div class="agregar-contacto">
+        <button type="button">Agregar Contacto</button>
+        <div class="formulario" style="display: none;">
+          <form action="#">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <label for="text">Banco:</label>
+            <input type="text" id="Banco" name="Banco">
+            <label for="cbu">CBU:</label>
+            <input type="number" name="cbu"></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <div id="alerta-contacto" class="d-none alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Contacto agregado</strong> El contacto se ha agregado correctamente.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <script src="sendmoney.js"></script>
+</body>
+
+</html>
